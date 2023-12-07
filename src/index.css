@@ -1,27 +1,33 @@
 :root {  
-    --black:#000000;
-    --white:#ffffff;
-    --dark-purple:#3c122c;
-    --medium-purple:#762ba3;
-    --light-purple:#ae40f0;
-    --yellow:#ffc800;
+    
     --pink:#fc5185;
-    --light-pink:#ffeffe;
-    --green:#00b090;
-    --background-gray:#eee;
+    --green:#00b090;    
+    --white: #FFFFFF;
+    --light-blueish-white: #FAFAFA;
+    --light-blueish-gray: #E6E6E6;
+    --medium-blueish-gray: #C0C0C0;
+    --dark-blueish-gray: #999999;
+    --light-blueish-black: #888888;
+    --dark-blueish-black: #444444;
+    --blueish-black: #000000;
+
+
 }
 
 body {
-    font-size: 1.6rem;    
-    background-color: var(--background-gray);
+    background-color: var(--light-blueish-gray);
 }
 
-body, button, input {
+select, select option, body, button, input {
     font-family: 'Nunito', sans-serif;
 }
 
+select, select option {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
 html {
-    font-size: 62.5%;
     box-sizing: border-box;
 }
 *,
@@ -36,10 +42,10 @@ html {
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 2rem;
 }
 h2 {
-    font-size: 3rem;
+    font-size: 1.5rem;
 }
 
 .sombra {
@@ -52,7 +58,7 @@ h2 {
 }
 
 header {
-    background-color: var(--dark-purple);
+    background-color: var(--dark-blueish-black);
 }
 
 header h1 {
@@ -60,7 +66,7 @@ header h1 {
     margin: 0;
     color: var(--white);
     text-align: center;
-    font-weight: 700;
+    font-weight: 900;
     text-transform: uppercase;
 }
 
@@ -69,22 +75,22 @@ header h1 {
     margin: 0 auto;
     padding: 10rem 0;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .formulario {
         padding: 5rem 0;
         width: 60rem;
     }
 }
 .formulario legend {
-    font-size: 3.6rem;
+    font-size: 2rem;
     text-align: center;
-    font-weight: 700;
+    font-weight: 900;
     display: block;
     text-transform: uppercase;
     color: var(--white);
     margin-bottom: 4rem;
     padding-bottom: 1rem;
-    border-bottom: 2px solid var(--dark-purple);
+    border-bottom: 2px solid var(--pink);
 }
 .formulario .campo {
     display: grid;
@@ -92,26 +98,26 @@ header h1 {
 }
 
 .formulario label {
-    color: var(--green);
-    font-size: 2.8rem;
+    color: var(--blueish-black);
+    font-size: 2rem;
     text-align: center;
     margin-bottom: 2rem;
-    font-weight: 700;
+    font-weight: 800;
 }
 
 .formulario input[type="text"],
 .formulario input[type="number"] {
-    background-color: var(--background-gray);
+    background-color: var(--light-blueish-white);
     border-radius: 1rem;
     padding: 1rem;
     border: none;
     flex: 1;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     font-weight: 600;
-    color: var(--black);
+    color: var(--blueish-black);
 }
 .formulario input[type="submit"] {
-    background-color: var(--green);
+    background-color: var(--light-blueish-black);
     border: none;
     padding: 1rem;
     text-align: center;
@@ -119,19 +125,19 @@ header h1 {
     color: var(--white);
     font-weight: 900;
     text-transform: uppercase;
-    font-size: 1.9rem;
+    font-size: 1.5rem;
     width: 100%;
     transition: background-color 300ms ease;
     border-radius: 1rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .formulario input[type="submit"] {
         display: block;
         padding: 1rem 5rem;
     }
 }
 .formulario input[type="submit"]:hover {
-    background-color: var(--dark-purple);
+    background-color: var(--green);
     cursor: pointer;
 }
 
@@ -141,7 +147,7 @@ header h1 {
     border: none;
     border-radius: 1rem;
     text-align: center;
-    background-color: var(--background-gray);
+    background-color: var(--white);
 }
 
 .alerta {
@@ -150,16 +156,13 @@ header h1 {
     margin: 2rem auto 2rem auto;
     font-weight: 900;
     text-transform: uppercase;
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     text-align: center;
 }
 .alerta.error {
     background-color: var(--white);
     border-left: 5px solid var(--pink);
     color: var(--pink);
-}
-
-.alerta.success {
 }
 
 .contenedor {
@@ -182,7 +185,7 @@ header h1 {
 .dos-columnas :first-child {
     margin-bottom: 4rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .dos-columnas {
         flex-direction: row;
         align-items: center;
@@ -197,7 +200,7 @@ header h1 {
 }
 .formulario input[type="text"].nuevo-presupuesto, 
 .formulario input[type="number"].nuevo-presupuesto {
-    font-size: 2.8rem;
+    font-size: 1.5rem;
     text-align: center;
 }
 
@@ -210,11 +213,11 @@ header h1 {
 }
 .contenido-presupuesto p {
     font-weight: 400;
-    color: var(--black);
-    font-size: 2.4rem;
+    color: var(--light-blueish-black);
+    font-size: 1.5rem;
     text-align: center;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .contenido-presupuesto p {
         text-align: left;
     }
@@ -229,23 +232,25 @@ header h1 {
 }
 .contenido-presupuesto span {
     font-weight: 900;
-    color: var(--dark-purple);
+    color: var(--blueish-black);
 }
 .reset-app {
     border: none;
-    background-color: var(--pink);
+    background-color: var(--light-blueish-gray);
     padding: 1rem;
     width: 100%;
     text-align: center;
-    color: var(--white);
+    color: var(--pink);
     text-transform: uppercase;
     font-weight: 900;
     border-radius: 1rem;
     transition-property: background-color;
     transition-duration: 300ms;
+    font-size: 1.2rem;
 }
 .reset-app:hover {
-    background-color: rgb(165, 19, 85);
+    background-color: var(--pink);
+    color: var(--white);
     cursor: pointer;
 }
 
@@ -259,9 +264,9 @@ main {
     gap: 2rem;
 }
 .filtros label {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 900;
-    color: var(--dark-purple);
+    color: var(--green);
 }
 .filtros select {
     flex: 1;
@@ -276,12 +281,12 @@ main {
     margin-top: 5rem;
 }
 .listado-gastos h2 {
-    color: var(--dark-purple);
+    color: var(--blueish-black);
     font-weight: 900;
 }
 .no-gastos {
     text-align: center;
-    font-size: 2.2rem;
+    font-size: 1.5rem;
 }
 
 .gasto {
@@ -294,8 +299,8 @@ main {
 }
 
 .cantidad-gasto {
-    font-size: 2.4rem;
-    color: var(--black);
+    font-size: 1.5rem;
+    color: var(--blueish-black);
     font-weight: 900;
 }
 
@@ -306,46 +311,36 @@ main {
 }
 
 .contenido-gasto img {
-    width: 10rem;
+    width: 7rem;
 }
 
 .descripcion-gasto p {
     margin: 0 0 0.3rem 0;
 }
-.descripcion-gasto .categoria {
-    color: var(--dark-purple);
-    font-size: 1.6rem;
-    font-weight: 900;
-    text-transform: uppercase;
-}
 .descripcion-gasto p {
-    margin-bottom: 1rem;
-}
-.descripcion-gasto .nombre-gasto {
-    color: var(--dark-purple);
-    font-size: 2.4rem;
-    font-weight: 700;
+    margin-bottom: 0.8rem;
 }
 .descripcion-gasto .nombre-gasto:hover {
     cursor: pointer;
 }
-.descripcion-gasto .fecha-gasto {
-    font-size: 1.8rem;
-    font-weight: 900;
-    color: var(--dark-purple);
+.descripcion-gasto .gasto-card {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--blueish-black);
 }
-.descripcion-gasto .fecha-gasto span {
+.descripcion-gasto .gasto-card span {
     font-weight: 400;
+    color: var(--light-blueish-black);
 }
 
 .nuevo-gasto {
     position: fixed;
-    bottom: 5rem;
-    right: 5rem;
+    bottom: 1rem;
+    right: 1.5rem;
 }
 
 .nuevo-gasto img {
-    width: 5rem;
+    width: 3rem;
 }
 .nuevo-gasto img:hover {
     cursor: pointer;
@@ -363,8 +358,8 @@ main {
     position: absolute;
     right: 3rem;
     top: 3rem;
-    width: 3rem;
-    height: 3rem;
+    width: 2rem;
+    height: 2rem;
 }
 .modal .cerrar-modal img {
     width: 100%;
@@ -399,18 +394,21 @@ body .modal {
 }
 
 .CircularProgressbar .CircularProgressbar-text {
-    font-size: 1rem !important;
+    font-size: 0.4rem !important;
+    font-weight: 700;
 }
 
 /*** SWIPE LIST OVERRIDES **/
 .swipe-action__leading {
-    background-color: var(--dark-purple);
+    background-color: var(--green);
     color: var(--white);
     margin-bottom: 2rem;
+    border-radius: 1.2rem;
+    margin-right: 0.5rem;
 }
 
 .swipe-action__trailing {
-    background-color: #db2777;
+    background-color: var(--pink);
     margin-bottom: 2rem;
     color: var(--white);
 }
@@ -421,4 +419,7 @@ body .modal {
     align-items: center;
     font-size: 2.4rem;
     text-align: right;
+    border-radius: 1.2rem;
+    margin-left: 0.5rem;
 }
+

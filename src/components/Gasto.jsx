@@ -61,9 +61,15 @@ const Gasto = ({ gasto, setGastoEditar, eliminarGasto }) => {
                             alt='Icono de la categoría'
                         />
                         <div className='descripcion-gasto'>
-                            <p className='categoria'>{categoria}</p>
-                            <p className='nombre-gasto'>{nombre}</p>
-                            <p className='fecha-gasto'>
+                            <p className='gasto-card'>
+                                Categoría: {''}
+                                <span>{categoria}</span>
+                            </p>
+                            <p className='gasto-card'>
+                                Descripción: {''}
+                                <span>{nombre}</span>
+                            </p>
+                            <p className='gasto-card'>
                                 Agregado el: {''}
                                 <span>{formatearFecha(fecha)}</span>
                             </p>

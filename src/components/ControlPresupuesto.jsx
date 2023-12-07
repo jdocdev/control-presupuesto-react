@@ -52,13 +52,13 @@ const ControlPresupuesto = ({
                     value={porcentaje}
                     background
                     backgroundPadding={4}
+                    text={`${porcentaje}% Gastado`}
                     styles={buildStyles({
                         backgroundColor: porcentaje > 100 ? '#fc5185' : '#00b090',
-                        textColor: "#000",
+                        textColor: "#fff",
                         pathColor: "#fff",
-                        trailColor: "transparent"
-                    })}
-                    text={`${porcentaje}% Gastado`}
+                        trailColor: "transparent",
+                    })}                    
                 />
             </div>
             <div className='contenido-presupuesto'>
