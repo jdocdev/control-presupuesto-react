@@ -16,6 +16,8 @@
 
 body {
     background-color: var(--light-blueish-gray);
+    margin: 0;
+    padding: 0;
 }
 
 select, select option, body, button, input {
@@ -75,10 +77,10 @@ header h1 {
     margin: 0 auto;
     padding: 10rem 0;
 }
-@media (min-width: 1024px) {
+@media (max-width: 1024px) {
     .formulario {
-        padding: 5rem 0;
-        width: 60rem;
+        padding: 1rem 0;
+        width: 100%;
     }
 }
 .formulario legend {
@@ -111,10 +113,10 @@ header h1 {
     border-radius: 1rem;
     padding: 1rem;
     border: none;
-    flex: 1;
     font-size: 1.2rem;
     font-weight: 600;
     color: var(--blueish-black);
+    width: 100%;
 }
 .formulario input[type="submit"] {
     background-color: var(--light-blueish-black);
@@ -165,6 +167,14 @@ header h1 {
     color: var(--pink);
 }
 
+@media screen and (max-width:1024px){
+    .alerta {
+        padding: 0.5rem;
+        width: 100%;
+        text-align: start;
+    }
+}
+
 .contenedor {
     width: 90%;
     max-width: 80rem;
@@ -208,6 +218,13 @@ header h1 {
     width: 25rem;
 }
 
+@media (max-width: 1024px) {
+    .contenedor-presupuesto svg {
+        width: 100%;
+    }
+    
+}
+
 .contenido-presupuesto {
     width: 100%;
 }
@@ -221,6 +238,7 @@ header h1 {
     .contenido-presupuesto p {
         text-align: left;
     }
+    
 }
 
 .contenido-presupuesto p.negativo span {
@@ -275,6 +293,13 @@ main {
     border-radius: 1rem;
     text-align: center;
     background-color: var(--background-gray);
+}
+
+@media screen and (max-width:1024px) {
+    .filtros .campo{
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 .listado-gastos {
@@ -333,6 +358,27 @@ main {
     color: var(--light-blueish-black);
 }
 
+@media screen and (max-width:1024px) {
+    .gasto {
+        flex-direction: column;
+        text-align: start;
+        align-items: flex-start;
+    }
+
+    .contenido-gasto {
+        flex-direction: column;        
+        margin-top: -1rem;
+    }
+
+    .descripcion-gasto {
+        margin-bottom: -2rem;
+    }
+    
+    .cantidad-gasto {
+        margin-bottom: -1rem;
+    }
+}
+
 .nuevo-gasto {
     position: fixed;
     bottom: 1rem;
@@ -353,6 +399,7 @@ main {
     left: 0;
     right: 0;
     bottom: 0;
+    width: 100%;
 }
 .modal .cerrar-modal {
     position: absolute;
@@ -373,6 +420,30 @@ main {
     transition-timing-function: ease-in;
     opacity: 0;
 }
+
+@media screen and (max-width:1024px) {
+    .modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 999; /* Ajusta según sea necesario */
+    }
+    
+    .modal .cerrar-modal img {
+        display: none;
+    }
+
+    .modal .formulario {
+        width: 90%;
+    }
+}
+
 .modal label {
     color: var(--white);
 }
@@ -396,6 +467,16 @@ body .modal {
 .CircularProgressbar .CircularProgressbar-text {
     font-size: 0.4rem !important;
     font-weight: 700;
+}
+
+@media screen and (max-width:1024px){
+    .CircularProgressbar .CircularProgressbar-text {
+        font-size: 0.5rem !important;
+    }
+
+    .dos-columnas :first-child {
+        margin-bottom: 1.8rem;
+    }
 }
 
 /*** SWIPE LIST OVERRIDES **/

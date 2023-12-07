@@ -59,6 +59,7 @@ const Modal = ({
                     src={CerrarBtn}
                     alt='botón para cerrar modal'
                     onClick={ocultarModal}
+                    onTouchEnd={ocultarModal}
                 />
             </div>
             <form
